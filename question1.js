@@ -1,4 +1,4 @@
-// Fråga 8.  (4p) 
+// Fråga 1.  (4p) 
 // Hämta todo-data från denna url: https://jsonplaceholder.typicode.com/todos/
 // Använd fetch och async/await, samt felhantering medd try/catch. 
 // Använd valfri metod för att begränsa antalet todo-objekt till 20 (utan att ändra i url).
