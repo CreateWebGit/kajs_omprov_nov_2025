@@ -7,12 +7,33 @@
 
 
 // Din kod här:
+const URL = "https://jsonplaceholder.typicode.com/todos/";
 
+async function loadTodos() {
+  try {
+    const res = await fetch(URL);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const todos = await res.json();
 
+    //max 20
+    const done = todos.slice(0, 20).filter((t) => t.completed === true);
 
+    //rendera
+    const list = document.getElementById("todoList");
+    list.innerHTML = "";
 
+    //rendera bullet points
+    done.forEach((t) => {
+      const li = document.createElement("li");
+      li.textContent = t.title;
+      list.appendChild(li);
+    });
+  } catch (err) {
+    console.error("error fetching todos:", err);
+  }
+}
 
-
+document.addEventListener("DOMContentLoaded", loadTodos);
 
 
 // Test
