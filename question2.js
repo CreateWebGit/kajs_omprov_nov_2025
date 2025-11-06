@@ -1,4 +1,4 @@
-// Fråga 9. (4p) OOP & Javascript
+// Fråga 2. (4p) OOP & Javascript
 // Du ska skapa två klasser med ES6 syntax, Book och Author.
 
 // Book ska ha följande egenskaper:
